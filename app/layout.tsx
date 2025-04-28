@@ -23,10 +23,25 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className="bg-black">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} bg-black antialiased`}
       >
+        <header className="fixed h-10 w-full z-50">
+          <div className="flex items-center justify-between h-full px-4">
+            <div className="flex items-center gap-2">
+              <span className="text-xl font-bold">My App</span>
+            </div>
+            <nav className="flex items-center gap-4">
+              <a className="text-gray-700 hover:text-gray-900">
+                Home
+              </a>
+              <a href="/about" className="text-gray-700 hover:text-gray-900">
+                About
+              </a>
+            </nav>
+          </div>
+        </header>
         {children}
       </body>
     </html>
