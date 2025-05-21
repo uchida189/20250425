@@ -27,16 +27,18 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} bg-black antialiased`}
       >
-        <header className="fixed h-10 w-full z-50">
-          <div className="flex items-center justify-between h-full px-4">
+        <header className="fixed top-0 w-full z-50">
+          <div className="bg-black flex items-center justify-between h-full px-3">
             <div className="flex items-center gap-2">
-              <span className="text-xl font-bold">My App</span>
+              <div className="bg-gradient-to-r from-violet-500 to-fuchsia-500 bg-clip-text text-2xl font-bold text-transparent">
+                My App
+              </div>
             </div>
-            <nav className="flex items-center gap-4">
-              <a className="text-gray-700 hover:text-gray-900">
+            <nav className="flex item-center gap-4">
+              <a className="text-gray-400 hover:text-orange-600 font-bold">
                 Home
               </a>
-              <a href="/about" className="text-gray-700 hover:text-gray-900">
+              <a href="/about" className="text-gray-400 hover:text-orange-600 font-bold">
                 About
               </a>
             </nav>
