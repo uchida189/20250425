@@ -1,5 +1,10 @@
 // app/page.tsx
+import { Rampart_One } from "next/font/google";
 
+const RampartOneFont = Rampart_One({
+  weight: "400",
+  subsets: ["latin"],
+});
 
 
 export default function Home() {
@@ -10,6 +15,7 @@ export default function Home() {
   return (
 
       <div>
+        
         <div className="w-full h-24 mt-9 bg-white text-indigo-500">
           <div className="bg-gradient-to-r from-orange-500 via-yellow-500 to-fuchsia-500 bg-clip-text text-2xl font-bold text-transparent">
               まず、寄せを使わないとこんな感じ
@@ -86,6 +92,9 @@ export default function Home() {
           <p className="bg-gradient-to-r from-pink-500 to-violet-500 bg-clip-text text-5xl font-extrabold text-transparent ...">
             Hello world
           </p>
+          <div className={RampartOneFont.className}>
+            人類社会のすべての構成員の固有の尊厳と平等で譲ることのできない権利とを承認することは
+          </div>
         </div>
       </div>
       
